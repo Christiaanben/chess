@@ -1,13 +1,9 @@
-import cocos
-
-from views.board import BoardView
+from scenes.game_manager import GameManager
 
 
 def main():
-    cocos.director.director.init()
-    board_view = BoardView()
-    main_scene = cocos.scene.Scene(board_view)
-    cocos.director.director.run(main_scene)
+    manager = GameManager()
+    manager.run()
 
 
 if __name__ == '__main__':

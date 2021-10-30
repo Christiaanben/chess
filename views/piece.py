@@ -2,11 +2,11 @@ import pygame
 from pygame.sprite import Sprite
 
 
-class BoardView(Sprite):
-    FILE_NAME = './images/board.png'
+class Piece(Sprite):
+    FILE_NAME = None
 
     def __init__(self):
-        super(BoardView, self).__init__()
+        super(Piece, self).__init__()
         self.image = pygame.image.load(self.FILE_NAME)
         self.rect = self.image.get_rect()
 
@@ -14,3 +14,5 @@ class BoardView(Sprite):
         surface.blit(self.image, self.rect)
 
 
+class Pawn(Piece):
+    FILE_NAME = 'images/pawn_black.png'
