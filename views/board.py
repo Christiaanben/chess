@@ -3,7 +3,7 @@ from pygame.sprite import Sprite
 
 
 class BoardView(Sprite):
-    FILE_NAME = './images/board.png'
+    FILE_NAME = './images/board_black_and_white.png'
 
     def __init__(self):
         super(BoardView, self).__init__()
