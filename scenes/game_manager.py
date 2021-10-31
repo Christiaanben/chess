@@ -16,8 +16,9 @@ class GameManager:
 
         self.board = BoardView()
         self.pieces = []
-        self.pieces.append(Pawn((2, 3)))
-        self.pieces.append(Pawn((2, 4), color=PieceColor.BLACK))
+        for col in range(8):
+            self.pieces.append(Pawn((col, 1), color=PieceColor.WHITE))
+            self.pieces.append(Pawn((col, 6), color=PieceColor.BLACK))
 
     def run(self):
         while True:
